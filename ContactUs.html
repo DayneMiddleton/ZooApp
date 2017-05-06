@@ -34,8 +34,37 @@
         </svg>
       </span>
 
-      <span class="header__title no--select">Mammals Info</span>
-    
+      <span class="header__title no--select">Contact Us</span>
+<script type="text/javascript">
+  	function html5_storage_support() {
+  		//check to see if this browser support local storage: return true if so, false if not
+		try {
+			return 'localStorage' in window && window['localStorage'] !== null;
+		} catch (e) {
+			return false;
+		}
+	}
+  	function save() {
+  		if (html5_storage_support()) {
+  			//get the user-entered values from the two text fields:
+  			var name1 = document.getElementById("name1").value;
+  			var message = document.getElementById("message").value;
+
+  			//create two local-storage keys (name1, name2) and assign
+  			//each the respective value from the text fields:
+  			localStorage.setItem('name1',name1);
+  			localStorage.setItem('message',message);
+  		}
+  	}
+
+  	function set() {
+  		if (html5_storage_support()) {
+  			//set the value of each text field from the stored values:
+  			document.getElementById('name1').value = localStorage.getItem('name1');
+  			document.getElementById('message').value = localStorage.getItem('message');
+  		}
+  	}
+  </script>
     </header>
 
     <div class="menu">
@@ -57,19 +86,21 @@
 <img src="images/FoxLogo.png" alt="ZooLogo" class="NHSLogo">
     
 
- <h1>Mammals</h1>    
-    <img src="images/LionImage.jpg" alt="LionImage" longdesc="AnImageExampleOfAnMammal" class="Buzzard">
-        
-    <h2>Mammal Information</h2>
-    <p>There are over 4000 different types of mammals. Mammals are very diverse. There are mammals that live above ground, mammals that can fly, mammals that live below ground and mammals that live under water. Mammals can live in locations of both warm temperatures and cold temperatures. For example, camels can survive in the dry, hot desert and polar bears can live near the cold polar regions of the earth. The blue whale, which is a mammal, is the largest animal on earth. The bull elephant, which is also a mammal, is the largest animal living on land.</p>
-        
-    <h3>Tap On A Mammal Below</h3>
-        
-        <a href="AfricanPaintedDog.html"><img src="images/AfricanPaintedDog.PNG" alt="AfricanPaintedDogImage" longdesc="TapToReadInfoAboutAfricanPaintedDog" class="BirdHome"></a>
-        <a href="MaylanianTiger.html"><img src="images/MaylanianTiger.PNG" alt="MaylanianTigerImage" longdesc="TapToReadInfoAboutMaylanianTiger" class="BirdHome"></a>
-        <a href="AfricanLion.html"><img src="images/AfricanLion.PNG" alt="AfricanLionImage" longdesc="TapToReadAboutAfricanLionImage" class="BirdHome"></a>
-        <a href="GrantsZebra.html"> <img src="images/GrantsZebra.PNG" alt="Grant'sZebraImage" longdesc="TapToReadAboutGrant'sZebra" class="BirdHome"></a>
-        
+ <h1>Contact Us</h1>    
+
+ <div id="maincontent">
+		  <article>
+			<h2>Storage Example</h2>
+			<label for="name">Name</label><br>
+			<input type="text" name="name1" id="name1"><br>
+			<br>
+			<label for="message">Message</label><br>
+			<input type="text" name="message" id="message"><br>
+			<br>
+			<button onclick="save()">Save</button>
+			<button onclick="set()">Update from Saved</button>
+		  </article>
+	  </div>
     
 
 
