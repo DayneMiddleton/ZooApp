@@ -51,7 +51,10 @@
         </ul>
           </div>
     <div class="menu__overlay"></div>
+       <body onload="myFunction()" style="margin:0;">
 
+<div id="loader"></div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
     <div class="app__content">
     
 <img src="images/FoxLogo.png" alt="NHS Logo" class="NHSLogo">
@@ -70,6 +73,18 @@
   <script src="./js/offline.js"></script>
   <script src="./js/menu.js"></script>
      <script src="scripts.js"></script>
+        <script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 1500);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
 
         </div>
       </div>
