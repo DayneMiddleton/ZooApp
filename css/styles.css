@@ -35,8 +35,8 @@ img.center {
   border-top: 16px solid #FFA500;
   width: 120px;
   height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 @-webkit-keyframes spin {
@@ -73,10 +73,7 @@ img.center {
   text-align: center;
 }
 
-img.NHSLogo{
-width:150px;
-height:100px;
-}
+
 
 img.FoxHeader{
 width:280px;
