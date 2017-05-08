@@ -1,7 +1,7 @@
 
 
-var BASE_PATH = '/staffordZoo/';
-var CACHE_NAME = 'Stafford Zoo Offline';
+var BASE_PATH = '/ZooApp/';
+var CACHE_NAME = 'gih-cache-v7';
 var TEMP_IMAGE_CACHE_NAME = 'temp-cache-v1';
 var CACHED_URLS = [
  // HTML
