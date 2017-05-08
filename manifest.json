@@ -1,7 +1,7 @@
 
 {
  "name": "Staffordshire Zoo",
-    "short_name": "Staffordshire Zoo",
+    "short_name": "Stafford zoo",
     "description": "An zoo application",
   "start_url": "./index.html?utm=homescreen",
   "display": "standalone",
